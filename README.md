@@ -1,175 +1,38 @@
-# culvert_bot_2.0
-A Discord bot used to track culvert scores of guild members.
+# Features
 
-# Discord Bot Commands
+### Admin-Only Commands
+Only those with administrator priviledges can use these commands. You can also set your own permissions by going into Server Settings -> Integrations -> Culvert Bot and overwrite the bot's permission's there for specific users or roles.
 
-This document provides an overview of all the commands available in the bot, including their descriptions, arguments, and examples.
+* `/record_scores` -> Record any guild member's score at a provided date.
+    * __Usage:__ Use when logging culvert scores every week. 
+* `/add_member [member_name]` -> Adds a member to the guild. This command is case-sensitive and **must** include special characters.
+    * __Usage:__ Use when a member joins the guild.
+* `/update_score [member_name][date][new_score]` -> Updates the score of a member at specific date.
+    * __Usage:__ Use when a member's score needs to be updated or changed.
+* `/update_join_date [member_name][join_date]` -> Update the join date of a specific member.
+    * __Usage:__ Use this when a member's join date needs to be changed.
+* `/update_member_class [member_name][new_class]` -> Update the class of a specific member.
+    * __Usage:__ Use this when a member's class needs to be updated or changed.
+* `/update_member_level [member_name][level]` -> Update the level of a specific mebmer.
+    * __Usage:__ Use this when a member's level needs to be updated or changed.
+* `/retrieve_members` -> Returns all active and recorded members in the guild.
+    * __Usage:__ This is a QOL command that returns a list of all members in alphabetical order to be used to copy-paste for easier score recording when using `/record_scores`.
+* `/delete_member [member_name][keep_in_file]` -> Deletes a specific member from the guild. You can choose to fully remove the member or mark them as inactive.
+    * __Usage:__ Set `keep_in_file` to `True` to simply mark the member as inactive but keep all records in the database. Set `keep_in_file` to `False` to completely remove all their records from the database. Any inactive member will not appear in any other command until `/reinstate` is used.
+* `/reinstate [member_name]` -> Marks a specific member from inactive to active.
+    * __Usage:__ Use this when a member returns to the guild and uses their previous records in the database.
+* `/delete_score [member_name][date]` -> Deletes a score for a specific member at a given date.
+    * __Usage:__ Use this when a score is needed to be removed from a member.
+* `/add_achievement [member_name][achievement]` -> Choose from a list of achievements to give to a specific member.
+* `/remove_achievement [member_name][achievement]` -> Removes an achievement from a specific member.
 
----
-
-## Command Categories
-- [Admin Commands](#admin-commands)
-- [Culvert Commands](#culvert-commands)
-
----
-
-## Admin Commands
-
-### `/admin record_scores`
-**Description:** Provides a modal to record scores for any number of members in the guild on the provided date. The member name is case-sensitive and must include any special characters if applicable.
-
-**Example:**
-```bash
-/admin record_scores
-```
-
-### `/admin add_member`
-**Description:** Adds a single member to the guild. The member name is case-sensitive and must include any special characters if applicable.
-
-**Arguments:**
-- `member_name` (str): Name of the member to add.
-- `join_date` (optional, str): Date the member joined the guild (format: `YYYY-MM-DD`). Defaults to today's date if not provided.
-
-**Example:**
-```bash
-/admin add_member member_name:chuåz join_date:2024-11-20
-```
-
-### `/admin update_score`
-**Description:** Updates a specific member's score for a given date.
-
-**Arguments:**
-- `member_name` (str): Name of the member to update.
-- `date` (str): Date of the score to update.
-
-**Example:**
-```bash
-/admin update_score member_name=chuåz date:2024-11-20
-```
-
-### `/admin update_join_date`
-**Description:** Updates the join date of a specific member.
-
-**Arguments:**
-- `member_name` (str): Name of the member to update.
-- `new_join_date` (str): Date the member joined.
-
-**Example:**
-```bash
-/admin update_join_date member_name:chuåz new_join_date:2024-11-20
-```
-
-### `/admin update_member_class`
-**Description:** Update the class of a specific member.
-
-**Arguments:**
-- `member_name` (str): Name of the member to update.
-- `new_class` (str): Class of the member.
-
-**Example:**
-```bash
-/admin update_member_class member_name:chuåz new_class:Adele
-```
-
-### `/admin update_member_level`
-**Description:** Updates the level of a specific member.
-
-**Arguments:**
-- `member_name` (str): Name of the member to update.
-- `level` (int): The new level to update to.
-
-**Example:**
-```bash
-/admin update_member_level member_name:chuåz level:288
-```
-
-### `/admin add_achievement`
-**Description:** Assigns a specific achievement to a member in the guild.
-
-**Arguments:**
-- `member_name` (str): Name of the member to assign the achievement to.
-- `achievement` (str): The achievement to assign. Available options:
-  - **Black Mage Solo Clear**
-  - **Hard Seren Solo Clear**
-  - **Easy Kalos Solo Clear**
-  - **Easy Kaling Solo Clear**
-  - **Normal Kalos Solo Clear**
-  - **Extreme Lotus Solo Clear**
-  - **Normal Kaling Solo Clear**
-  - **Chaos Kalos Clear**
-  - **Extreme Black Mage Clear**
-  - **Extreme Seren Clear**
-  - **Hard Kaling Clear**
-  - **Reach Floor 40 in Dojo**
-  - **Reach Floor 50 in Dojo**
-  - **Reach Floor 60 in Dojo**
-  - **Reach Floor 70 in Dojo**
-  - **Reach Floor 80 in Dojo**
-  - **Reach Floor 90 in Dojo**
-
-**Example:**
-```bash
-/add_achievement member_name:chuåz achievement:Black Mage Solo Clear
-```
-
-### `/admin remove_achievement`
-**Description:** Remove an achievement from a member.
-
-**Arguments:**
-- `member_name` (str): Name of the member to remove an achievement from.
-- `achievement` (str): The achievement to assign. Available options:
-  - **Black Mage Solo Clear**
-  - **Hard Seren Solo Clear**
-  - **Easy Kalos Solo Clear**
-  - **Easy Kaling Solo Clear**
-  - **Normal Kalos Solo Clear**
-  - **Extreme Lotus Solo Clear**
-  - **Normal Kaling Solo Clear**
-  - **Chaos Kalos Clear**
-  - **Extreme Black Mage Clear**
-  - **Extreme Seren Clear**
-  - **Hard Kaling Clear**
-  - **Reach Floor 40 in Dojo**
-  - **Reach Floor 50 in Dojo**
-  - **Reach Floor 60 in Dojo**
-  - **Reach Floor 70 in Dojo**
-  - **Reach Floor 80 in Dojo**
-  - **Reach Floor 90 in Dojo**
-
-**Example:**
-```bash
-/admin remove_achievement member_name:chuåz achievement:Black Mage Solo Clear
-```
-
-### `/admin delete_member`
-**Description**: Delete a specific member from the guild. You can choose to fully remove the member or mark them as inactive (`in_guild=false`)
-
-**Arguments**:
-- `member_name` (str): Name of the member to delete.
-- `keep_in_file` (bool): Whether to keep the member in the file but mark them as inactive. Default: `False`.
-
-**Example**:
-```bash
-/admin delete_member member_name:chuåz keep_in_file:true
-```
-
-### `/admin reinstate`
-**Description:** Reinstates a member marked as inactive (`in_guild=false`) to active status (`in_guild=true`).
-
-**Arguments:**
-- `member_name` (str): Name of the inactive member to reinstate
-
-**Example:**
-```bash
-/admin reinstate member_name:chuåz
-```
-
-### `/admin retrieve_members`
-**Description:** Returns the list of all active members in the guild in alphabetical order. Use this command for a copy-paste to put into `/admin record_scores` so there is no need to type in the names of recorded members.
-
-**Example:**
-```bash
-/admin retrieve_members
-```
-
-
+### Public Culvert Commands
+* `/profile [member]` -> Displays the culvert profile of a member. Shows class, level, join date, this week's score, best score, closest competitor, weekly rank, change from last week, average change over the last 6 recorded scores, achievements, past scores, and participation.
+* `/graph [member] optional:[second_member]` -> Displays a graph of scores for one or two members.
+* `/leaderboard [date]` -> Displays the leaderboard for all scores recorded on a specific date.
+* `/class [mode][class_name] optional:[graph] optional:[date]` -> Displays class information for culvert scores.
+    * Top Mode: Shows the top members with the highest cumulative culvert score.
+      * Graph: If `graph` is set to `True`, display a graph of all culvert scores of all members in the specified class.
+      * Date: If `date` is specified, display a graph of all culvert scores of all members in the specified class for the date.
+    * Compare Mode: Shows the top classes with the highest cumulative culvert score.
+      * Date: If `date` is specified, display the top classes with highest total culvert scores on that date.
