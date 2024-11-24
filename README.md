@@ -24,4 +24,6 @@ This document provides an overview of all the commands available in the bot, inc
 
 **Example**:
 ```bash
-/add_member member_name:Liwa join_date:2024-11-20
+/add_member member_name:chuåz join_date:2024-11-20
+
+
