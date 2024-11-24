@@ -86,6 +86,7 @@ This document provides an overview of all the commands available in the bot, inc
 ### `/admin add_achievement
 **Description:** Assigns a specific achievement to a member in the guild.
 
+**Arguments:**
 - `member_name` (str): Name of the member to assign the achievement to.
 - `achievement` (str): The achievement to assign. Available options:
   - **Black Mage Solo Clear**
@@ -106,9 +107,38 @@ This document provides an overview of all the commands available in the bot, inc
   - **Reach Floor 80 in Dojo**
   - **Reach Floor 90 in Dojo**
 
-**Example**:
+**Example:**
 ```bash
-/add_achievement member_name:Liwa achievement:Black Mage Solo Clear
+/add_achievement member_name:chuåz achievement:Black Mage Solo Clear
+```
+
+### `/admin remove_achievement`
+**Description:** Remove an achievement from a member.
+
+**Arguments:**
+- `member_name` (str): Name of the member to remove an achievement from.
+- `achievement` (str): The achievement to assign. Available options:
+  - **Black Mage Solo Clear**
+  - **Hard Seren Solo Clear**
+  - **Easy Kalos Solo Clear**
+  - **Easy Kaling Solo Clear**
+  - **Normal Kalos Solo Clear**
+  - **Extreme Lotus Solo Clear**
+  - **Normal Kaling Solo Clear**
+  - **Chaos Kalos Clear**
+  - **Extreme Black Mage Clear**
+  - **Extreme Seren Clear**
+  - **Hard Kaling Clear**
+  - **Reach Floor 40 in Dojo**
+  - **Reach Floor 50 in Dojo**
+  - **Reach Floor 60 in Dojo**
+  - **Reach Floor 70 in Dojo**
+  - **Reach Floor 80 in Dojo**
+  - **Reach Floor 90 in Dojo**
+
+**Example:**
+```bash
+/admin remove_achievement member_name:chuåz achievement:Black Mage Solo Clear
 ```
 
 ### `/admin delete_member`
