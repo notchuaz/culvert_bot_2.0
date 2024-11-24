@@ -17,6 +17,14 @@ Only those with administrator priviledges can use these commands. You can also s
     * __Usage:__ Use this when a member's level needs to be updated or changed.
 * `/retrieve_members` -> Returns all active and recorded members in the guild.
     * __Usage:__ This is a QOL command that returns a list of all members in alphabetical order to be used to copy-paste for easier score recording when using `/record_scores`.
+    * The list looks like this:
+``` bash
+Member1,
+Member2,
+Member3,
+Member4,
+...
+```
 * `/delete_member [member_name][keep_in_file]` -> Deletes a specific member from the guild. You can choose to fully remove the member or mark them as inactive.
     * __Usage:__ Set `keep_in_file` to `True` to simply mark the member as inactive but keep all records in the database. Set `keep_in_file` to `False` to completely remove all their records from the database. Any inactive member will not appear in any other command until `/reinstate` is used.
 * `/reinstate [member_name]` -> Marks a specific member from inactive to active.
