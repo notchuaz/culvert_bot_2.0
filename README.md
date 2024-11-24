@@ -83,7 +83,7 @@ This document provides an overview of all the commands available in the bot, inc
 /admin update_member_level member_name:chuåz level:288
 ```
 
-### `/admin add_achievement
+### `/admin add_achievement`
 **Description:** Assigns a specific achievement to a member in the guild.
 
 **Arguments:**
@@ -159,9 +159,17 @@ This document provides an overview of all the commands available in the bot, inc
 **Arguments:**
 - `member_name` (str): Name of the inactive member to reinstate
 
-**Exaxmple:**
+**Example:**
 ```bash
 /admin reinstate member_name:chuåz
+```
+
+### `/admin retrieve_members`
+**Description:** Returns the list of all active members in the guild in alphabetical order. Use this command for a copy-paste to put into `/admin record_scores` so there is no need to type in the names of recorded members.
+
+**Example:**
+```bash
+/admin retrieve_members
 ```
 
 
