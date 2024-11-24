@@ -36,3 +36,36 @@ Only those with administrator priviledges can use these commands. You can also s
       * Date: If `date` is specified, display a graph of all culvert scores of all members in the specified class for the date.
     * Compare Mode: Shows the top classes with the highest cumulative culvert score.
       * Date: If `date` is specified, display the top classes with highest total culvert scores on that date.
+
+### Available Achievements
+
+* Black Mage Solo
+* Hard Seren Solo
+* Easy Kalos Solo
+* Normal Kalos Solo
+* Extreme Lotus Solo
+* Normal Kaling Solo
+* Chaos Kalos Clear
+* Extreme Black Mage Clear
+* Extreme Seren Clear
+* Hard Kaling Clear
+* Extreme Kalos Clear
+* Reach Level 260
+* Reach Level 265
+* Reach Level 270
+* Reach Level 275
+* Reach Level 280
+* Reach Level 285
+* Reach Level 290
+* Reach Floor 40 in Dojo
+* Reach Floor 50 in Dojo
+* Reach Floor 60 in Dojo
+* Reach Floor 70 in Dojo
+* Reach Floor 80 in Dojo
+* Reach Floor 90 in Dojo
+* Reach 50k Culvert
+* Reach 60k Culvert
+* Reach 70k Culvert
+* Reach 80k Culvert
+* Reach 90k Culvert
+* Reach 100k Culvert
