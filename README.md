@@ -3,10 +3,15 @@
 ### Admin-Only Commands
 Only those with administrator priviledges can use these commands. You can also set your own permissions by going into Server Settings -> Integrations -> Culvert Bot and overwrite the bot's permission's there for specific users or roles.
 
+* `/set_date` -> Sets the date for which members of the guild will be entering their scores for. This will be set to None every week at Culvert reset.
+   * __Usage:__ Every week, an admin must set the date for which members can enter their own scores, otherwise they will be unable to. 
 * `/record_scores` -> Record any guild member's score at a provided date.
     * __Usage:__ Use when logging culvert scores every week. 
 * `/add_member [member_name]` -> Adds a member to the guild. This command is case-sensitive and **must** include special characters.
     * __Usage:__ Use when a member joins the guild.
+* `/add_all` -> Allows the user to add members in bulk in the modal.
+    * __Usage:__ Use this when initializing the bot with the guild so it is easier to add more than one member. User `/add_member` to only add a single member to the guild.
+    * __Example:__ This will be in the form of `name,level,class,[join_date] (e.g.chuåz,288,Adele,2024-11-23) [If a date is not provided, the date will be the date the command is executed.
 * `/update_score [member_name][date][new_score]` -> Updates the score of a member at specific date.
     * __Usage:__ Use when a member's score needs to be updated or changed.
 * `/update_join_date [member_name][join_date]` -> Update the join date of a specific member.
@@ -44,6 +49,7 @@ Member4,
       * Date: If `date` is specified, display a graph of all culvert scores of all members in the specified class for the date.
     * Compare Mode: Shows the top classes with the highest cumulative culvert score.
       * Date: If `date` is specified, display the top classes with highest total culvert scores on that date.
+* `/add_score [member_name][score]` -> Adds a score for a specific member for a specified date by the admins.
 
 ### Available Achievements
 
