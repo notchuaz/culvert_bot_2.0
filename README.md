@@ -11,7 +11,7 @@ Only those with administrator priviledges can use these commands. You can also s
     * __Usage:__ Use when a member joins the guild.
 * `/add_all` -> Allows the user to add members in bulk in the modal.
     * __Usage:__ Use this when initializing the bot with the guild so it is easier to add more than one member. User `/add_member` to only add a single member to the guild.
-    * __Example:__ This will be in the form of `name,level,class,[join_date]' (e.g.chuåz,288,Adele,2024-11-23) [If a date is not provided, the date will be the date the command is executed.
+    * __Example:__ This will be in the form of `name,level,class,[join_date]` (e.g.chuåz,288,Adele,2024-11-23) [If a date is not provided, the date will be the date the command is executed.
 * `/update_score [member_name][date][new_score]` -> Updates the score of a member at specific date.
     * __Usage:__ Use when a member's score needs to be updated or changed.
 * `/update_join_date [member_name][join_date]` -> Update the join date of a specific member.
