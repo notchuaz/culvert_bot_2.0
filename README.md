@@ -3,8 +3,6 @@
 ### Admin-Only Commands
 Only those with administrator priviledges can use these commands. You can also set your own permissions by going into Server Settings -> Integrations -> Culvert Bot and overwrite the bot's permission's there for specific users or roles.
 
-* `/set_date` -> Sets the date for which members of the guild will be entering their scores for. This will be set to None every week at Culvert reset.
-   * __Usage:__ Every week, an admin must set the date for which members can enter their own scores, otherwise they will be unable to. 
 * `/record_scores` -> Record scores for members on the current week.
     * __Usage:__ Use when logging culvert scores every week.
 * `/record_lastweek_scores` -> Record scores for members of the previous week.
