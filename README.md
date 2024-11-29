@@ -5,8 +5,10 @@ Only those with administrator priviledges can use these commands. You can also s
 
 * `/set_date` -> Sets the date for which members of the guild will be entering their scores for. This will be set to None every week at Culvert reset.
    * __Usage:__ Every week, an admin must set the date for which members can enter their own scores, otherwise they will be unable to. 
-* `/record_scores` -> Record any guild member's score at a provided date.
-    * __Usage:__ Use when logging culvert scores every week. 
+* `/record_scores` -> Record scores for members on the current week.
+    * __Usage:__ Use when logging culvert scores every week.
+* `/record_lastweek_scores` -> Record scores for members of the previous week.
+    * __Usage:__ Use this to record any score for members of the previous week. I imagine this will be used more versus `/record_scores` since scores are normally recorded after culvert reset.
 * `/add_member [member_name]` -> Adds a member to the guild. This command is case-sensitive and **must** include special characters.
     * __Usage:__ Use when a member joins the guild.
 * `/add_all` -> Allows the user to add members in bulk in the modal.
@@ -49,7 +51,7 @@ Member4,
       * Date: If `date` is specified, display a graph of all culvert scores of all members in the specified class for the date.
     * Compare Mode: Shows the top classes with the highest cumulative culvert score.
       * Date: If `date` is specified, display the top classes with highest total culvert scores on that date.
-* `/add_score [member_name][score]` -> Adds a score for a specific member for a specified date by the admins.
+* `/add_score [member_name][score]` -> Adds a score for a specific member for the current week.
 
 ### Available Achievements
 
