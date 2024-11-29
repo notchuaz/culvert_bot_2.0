@@ -9,6 +9,8 @@ Only those with administrator priviledges can use these commands. You can also s
     * __Usage:__ Use when logging culvert scores every week.
 * `/record_lastweek_scores` -> Record scores for members of the previous week.
     * __Usage:__ Use this to record any score for members of the previous week. I imagine this will be used more versus `/record_scores` since scores are normally recorded after culvert reset.
+* `/whodidntrecord [last_week]` -> Returns a list of members who don't have a score recorded for the current week.
+    * __Usage:__ Use this to see who didn't record or who doesn't have a score recorded for the current week. If `last_week` is set to True, it will show who doesn't have a recorded score for the previous week.  
 * `/add_member [member_name]` -> Adds a member to the guild. This command is case-sensitive and **must** include special characters.
     * __Usage:__ Use when a member joins the guild.
 * `/add_all` -> Allows the user to add members in bulk in the modal.
